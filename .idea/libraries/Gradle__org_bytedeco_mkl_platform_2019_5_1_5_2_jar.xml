@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.bytedeco:mkl-platform:2019.5-1.5.2@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bytedeco/mkl-platform/2019.5-1.5.2/cfdb471a9b317d378f8547e60f76be4fe690aff5/mkl-platform-2019.5-1.5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bytedeco/mkl-platform/2019.5-1.5.2/d5bf5620e2f0bd465bbeeab8504f65d09409fd8d/mkl-platform-2019.5-1.5.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bytedeco/mkl-platform/2019.5-1.5.2/46797dda3f829f5c6fb5cb06287df7e8bee353b3/mkl-platform-2019.5-1.5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

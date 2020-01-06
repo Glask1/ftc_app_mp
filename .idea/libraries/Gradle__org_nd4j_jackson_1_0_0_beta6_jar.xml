@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.nd4j:jackson:1.0.0-beta6@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.nd4j/jackson/1.0.0-beta6/861665e06c0e7de3cf05fe2bbd50a661ca149c32/jackson-1.0.0-beta6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.nd4j/jackson/1.0.0-beta6/3f45dc7aad7116c1f1d9a4d187736a5f573cc062/jackson-1.0.0-beta6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.nd4j/jackson/1.0.0-beta6/6eef1d9178177622e9a123ed353a919ec55e8ee9/jackson-1.0.0-beta6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

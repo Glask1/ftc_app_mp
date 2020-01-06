@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.nd4j:nd4j-native-api:1.0.0-beta6@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.nd4j/nd4j-native-api/1.0.0-beta6/b211aebcba437806d3dbd5395ff0b8911fe6a7fa/nd4j-native-api-1.0.0-beta6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.nd4j/nd4j-native-api/1.0.0-beta6/df278c42ecf3576aa7cb82a6ff84236b23966e2b/nd4j-native-api-1.0.0-beta6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.nd4j/nd4j-native-api/1.0.0-beta6/db8e260f489e5eb1d3db4caa8e73cdc29bcf936f/nd4j-native-api-1.0.0-beta6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

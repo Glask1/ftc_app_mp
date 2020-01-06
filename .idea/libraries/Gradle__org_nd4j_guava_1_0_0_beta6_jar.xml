@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.nd4j:guava:1.0.0-beta6@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.nd4j/guava/1.0.0-beta6/cd6e84a3f50866ae23b4086d4a23c724dd144c1d/guava-1.0.0-beta6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.nd4j/guava/1.0.0-beta6/6788d5499299553993181248456f8e9792ce5984/guava-1.0.0-beta6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.nd4j/guava/1.0.0-beta6/cf3b8d7e7674e927ec6a8e25335e2521beb5636e/guava-1.0.0-beta6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
