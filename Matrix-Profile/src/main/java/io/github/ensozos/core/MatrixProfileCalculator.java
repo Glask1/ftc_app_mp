@@ -2,11 +2,14 @@ package io.github.ensozos.core;
 
 import io.github.ensozos.core.order.Order;
 import io.github.ensozos.utils.CustomOperations;
-import javafx.util.Pair;
+
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.indexing.INDArrayIndex;
 import org.nd4j.linalg.indexing.NDArrayIndex;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.*;
 
 
@@ -52,7 +55,7 @@ class MatrixProfileCalculator {
     /**
      * @return a Pair with profile matrix as key and profile index as value.
      */
-    Pair<INDArray, INDArray> calculateSerially() {
+    Map<INDArray, INDArray> calculateSerially() {
 
         int index = order.getNext();
 
@@ -60,15 +63,18 @@ class MatrixProfileCalculator {
             new MPRunnable(index).run();
             index = order.getNext();
         }
+        Map<INDArray, INDArray> m = new HashMap<INDArray, INDArray>();
+        m.put(matrixProfile, matrixProfileIndex);
 
-        return new Pair<>(matrixProfile, matrixProfileIndex);
+        return m;
+
     }
 
     /**
      * Use fixed thread pool to execute concurrently using available processors.
      * @return a Pair with profile matrix as key and profile index as value.
      */
-    Pair<INDArray, INDArray> calculateConcurrently() {
+    Map<INDArray, INDArray> calculateConcurrently() {
 
         int numProcs = Runtime.getRuntime().availableProcessors();
         ExecutorService executor = Executors.newFixedThreadPool(numProcs);
@@ -81,7 +87,11 @@ class MatrixProfileCalculator {
         }
         shutdown(executor);
 
-        return new Pair<>(matrixProfile, matrixProfileIndex);
+        Map<INDArray, INDArray> m = new HashMap<INDArray, INDArray>();
+        m.put(matrixProfile, matrixProfileIndex);
+
+        return m;
+
     }
 
     /**

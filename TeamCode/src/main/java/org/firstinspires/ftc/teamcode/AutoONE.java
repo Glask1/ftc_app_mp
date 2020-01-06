@@ -20,8 +20,12 @@ public class AutoONE extends LinearOpMode {
 
         matrixProfile.stamp(target, window, 1.0);
 
+        telemetry.addData("", matrixProfile);
+        telemetry.update();
+
+
         while (!isStopRequested()){
-            telemetry.update();
+            //telemetry.update();
         }
         requestOpModeStop();
     }

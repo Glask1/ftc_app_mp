@@ -5,7 +5,7 @@ import io.github.ensozos.core.distance.DistanceProfileFactory;
 import io.github.ensozos.core.order.LinearOrder;
 import io.github.ensozos.core.order.Order;
 import io.github.ensozos.core.order.RandomOrder;
-import javafx.util.Pair;
+import java.util.Map;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import java.util.Random;
 
@@ -41,7 +41,7 @@ public class MatrixProfile {
      * @param window size of window
      * @return a Pair with profile matrix as key and profile index as value.
      */
-    public Pair<INDArray, INDArray> stmp(INDArray target, INDArray query, int window) {
+    public Map<INDArray, INDArray> stmp(INDArray target, INDArray query, int window) {
         DistanceProfile stamp = distanceProfileFactory.getDistanceProfile(DistanceProfileFactory.STAMP);
 
         int target_shape = (int) target.shape()[1];
@@ -67,7 +67,7 @@ public class MatrixProfile {
      * @param window size of window
      * @return a Pair with profile matrix as key and profile index as value.
      */
-    public Pair<INDArray, INDArray> stmp(INDArray target, int window) {
+    public Map<INDArray, INDArray> stmp(INDArray target, int window) {
         DistanceProfile stamp = distanceProfileFactory.getDistanceProfile(DistanceProfileFactory.STAMP);
 
         if (target.shape()[1] <= window)
@@ -92,7 +92,7 @@ public class MatrixProfile {
      *                A value of 1 means that it will be slow but perfectly accurate.
      * @return a Pair with profile matrix as key and profile index as value.
      */
-    public Pair<INDArray, INDArray> stamp(INDArray target, INDArray query, int window, double accuracy) {
+    public Map<INDArray, INDArray> stamp(INDArray target, INDArray query, int window, double accuracy) {
         DistanceProfile stamp = distanceProfileFactory.getDistanceProfile(DistanceProfileFactory.STAMP);
 
         int target_shape = (int) target.shape()[1];
@@ -124,7 +124,7 @@ public class MatrixProfile {
      *                 A value of 1 means that it will be slow but perfectly accurate.
      * @return a Pair with profile matrix as key and profile index as value.
      */
-    public Pair<INDArray, INDArray> stamp(INDArray target, int window, double accuracy) {
+    public Map<INDArray, INDArray> stamp(INDArray target, int window, double accuracy) {
         DistanceProfile stamp = distanceProfileFactory.getDistanceProfile(DistanceProfileFactory.STAMP);
 
         if (target.shape()[1] <= window)
@@ -149,7 +149,7 @@ public class MatrixProfile {
      * @param trivialMatch trivial match
      * @return a Pair with profile matrix as key and profile index as value.
      */
-    private Pair<INDArray, INDArray> matrixProfile(
+    private Map<INDArray, INDArray> matrixProfile(
             INDArray timeSeriesA, int window, Order order, DistanceProfile dp,
             INDArray timeSeriesB, boolean trivialMatch) {
 
