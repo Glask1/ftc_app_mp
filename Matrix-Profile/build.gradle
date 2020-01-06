@@ -7,12 +7,13 @@ repositories {
 }
 
 dependencies {
-    implementation("org.nd4j:nd4j-native-platform:1.0.0-beta5") {
+    implementation("org.nd4j:nd4j-native-platform:1.0.0-beta3") {
         exclude module: "protobuf"
         exclude module: "slf4j-api"
+        exclude group: "com.google.code.gson"
     }
     compile group: 'com.github.wendykierp', name: 'JTransforms', version: '3.1'
-    compile "com.google.guava:guava:16+"
+    implementation("com.google.guava:guava:16")
 }
 
 test {
