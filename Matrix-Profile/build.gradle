@@ -1,0 +1,45 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.nd4j:nd4j-native-platform:1.0.0-beta6"
+    compile group: 'com.github.wendykierp', name: 'JTransforms', version: '3.1'
+    compile "com.google.guava:guava:16+"
+}
+
+test {
+    useJUnit {
+        exclude '**/*PerformanceTest.class'
+    }
+}
+
+task performanceTest(type: Test) {
+    useJUnit {
+        include '**/*PerformanceTest.class'
+    }
+}
+
+// Deploying
+apply plugin: 'maven'
+
+// Add Javadoc JAR and sources JAR to artifact
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+group = "io.github.ensozos"
+archivesBaseName = "matrix-profile"
+version '0.0.3'
